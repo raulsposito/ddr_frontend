@@ -43,5 +43,12 @@ function decrementCounter() {
     if (currentCount > 0) {
         counter.textContent =  `${currentCount - 1}`;
     }
+    else
+    resumeGame()
     // else resume game
+}
+
+function resumeGame() {
+    counter.textContent = "Game Over";
+    // here would go a post request to game to post the score
 }
