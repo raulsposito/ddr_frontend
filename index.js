@@ -27,10 +27,8 @@ const renderGameCard = (gameObj) => {
     let gameCard = document.createElement('div')
     gameCard.className = "card"
     gameCard.dataset.id = gameObj.id 
-    gameCard.innerHTML = `${gameObj.score}`
+    gameCard.innerHTML = `Previous Scores: ${gameObj.score} by player ${gameObj.player_id}`
     main().appendChild(gameCard)
-    let gameList = documentCreate('ul')
-    gameCard.appendChild(gameList)
 } 
 // const renderPlayerCard = (playerObj) => {
 //     let playerCard = document.createElement('div')
