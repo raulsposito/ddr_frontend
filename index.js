@@ -3,10 +3,15 @@ let timer;
 const counter = document.querySelector("#counter");
 const start = document.querySelector("#start");
 
-// document.addEventListener('DOMContentLoaded', () => {
-//     getPlayers(),
-//     renderPlayers()
-// })
+ document.addEventListener('DOMContentLoaded', () => {
+     getGames()
+})
+
+const getGames = () => {
+    fetch('http://localhost:3000/api/v1/game')
+    .then(r => r.json())
+    .then(data => renderGames(data))
+}
 
 start.addEventListener("click", startGame);
 
@@ -14,16 +19,19 @@ const main = () => {
     return document.querySelector('main')
 }
 
-// const getPlayers = () => {
-//     fetch('http://localhost:3000/api/v1/player')
-//     .then(r => r.json())
-//     .then(data => renderPlayers(data))
-// }
-// 
-// const renderPlayers = (playersData) => {
-//     playersData.forEach(player => renderPlayerCard(player))
-// }
-// 
+const renderGames = (gameData) => {
+    gameData.forEach(game => renderGameCard(game))
+}
+
+const renderGameCard = (gameObj) => {
+    let gameCard = document.createElement('div')
+    gameCard.className = "card"
+    gameCard.dataset.id = gameObj.id 
+    gameCard.innerHTML = `${gameObj.score}`
+    main().appendChild(gameCard)
+    let gameList = documentCreate('ul')
+    gameCard.appendChild(gameList)
+} 
 // const renderPlayerCard = (playerObj) => {
 //     let playerCard = document.createElement('div')
 //     playerCard.className = "card"
