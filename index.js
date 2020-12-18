@@ -30,15 +30,6 @@ const renderGameCard = (gameObj) => {
     gameCard.innerHTML = `Previous Scores: ${gameObj.score} by player ${gameObj.player_id}`
     main().appendChild(gameCard)
 } 
-// const renderPlayerCard = (playerObj) => {
-//     let playerCard = document.createElement('div')
-//     playerCard.className = "card"
-//     playerCard.dataset.id = playerObj.id 
-//     playerCard.innerHTML = `<p>${playerObj.name}</p>`
-//     main().appendChild(playerCard)
-//     let playerList = document.createElement('ul')
-//     playerCard.appendChild(playerList)
-// }
 
 function startGame() {
     timer = setInterval(decrementCounter, 1000);
