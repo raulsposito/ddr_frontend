@@ -22,14 +22,13 @@ input.addEventListener("change", handleInput);
 
 function displayName(event) {
     event.preventDefault();
-
+    input.style.display = 'none';
+    createButton.style.display = 'none';
 }
 
 function handleInput(event) {
     const banner = document.querySelector("#banner");
     banner.textContent = event.target.value;
-    input.style.display = 'none';
-    createButton.style.display = 'none';
 }
 
 start.addEventListener("click", startGame);
