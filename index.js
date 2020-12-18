@@ -2,15 +2,34 @@ let timer;
 
 const counter = document.querySelector("#counter");
 const start = document.querySelector("#start");
+const playerName = document.querySelector("#name");
+const form = document.querySelector("#name-form");
+const input = document.querySelector("#player");
+const createButton = document.querySelector("#create-button");
 
- document.addEventListener('DOMContentLoaded', () => {
-     getGames()
+document.addEventListener('DOMContentLoaded', () => {
+    getGames()
 })
 
 const getGames = () => {
     fetch('http://localhost:3000/api/v1/game')
     .then(r => r.json())
     .then(data => renderGames(data))
+}
+
+form.addEventListener("submit", displayName);
+input.addEventListener("change", handleInput);
+
+function displayName(event) {
+    event.preventDefault();
+
+}
+
+function handleInput(event) {
+    const banner = document.querySelector("#banner");
+    banner.textContent = event.target.value;
+    input.style.display = 'none';
+    createButton.style.display = 'none';
 }
 
 start.addEventListener("click", startGame);
