@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     getGames()
 })
 
+// first fetch call to get previous Game Scores
 const getGames = () => {
     fetch('http://localhost:3000/api/v1/game')
     .then(r => r.json())
@@ -65,5 +66,6 @@ function decrementCounter() {
 
 function resumeGame() {
     counter.textContent = "Game Over";
-    // here would go a post request to game to post the score
+    // postGameScore()here would go a post request to game to post the score
 }
+
