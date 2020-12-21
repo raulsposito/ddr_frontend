@@ -9,7 +9,7 @@ main {
 }
 
 .name {
-    background: url('img/DDRevolution2.png') no-repeat;
+    background: url('img/background.jpg') no-repeat;
 	background-size: cover;
 	background-position:center;
     position: absolute;
