@@ -66,6 +66,30 @@ function decrementCounter() {
 
 function resumeGame() {
     counter.textContent = "Game Over";
+    // let score = document.querySelector("#score");
+
+    // postGameScore(score)
     // postGameScore()here would go a post request to game to post the score
 }
 
+// function postGameScore(score) {
+//     return fetch('http://localhost:3000/api/v1/game', {
+//         method: "POST",
+//         headers: {
+//             "Content-Type": "application/json", 
+//             "Accept": "application/json"
+//         },
+//         body: JSON.stringify( {
+//             score 
+//         })
+//     })
+//     .then( function (response) {
+//         return response.json()
+//     })
+//     .then( function ( object ) {
+//         document.body.innerHTML = object["id"]
+//     })
+//     .catch( function (error) {
+//         document.body.innerHTML = error.message
+//     })
+// }
