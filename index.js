@@ -2,10 +2,10 @@ let timer;
 
 const counter = document.querySelector("#counter");
 const start = document.querySelector("#button-start");
-const playerName = document.querySelector("#name");
+// const playerName = document.querySelector("#name");
 // const form = document.querySelector("#name-form");
-const input = document.querySelector("#player");
-const createButton = document.querySelector("#create-button");
+// const input = document.querySelector("#player");
+// const createButton = document.querySelector("#create-button");
 
 document.addEventListener('DOMContentLoaded', () => {
     getGames()

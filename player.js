@@ -4,13 +4,15 @@ class Player{
     }
 
     renderPlayer(){
-        let playerDiv = document.getElementById("name-container")
+        let playerDiv = document.getElementById("banner")
     
-        playerDiv.innerHTML +=
+        playerDiv.innerHTML =
         `
         <h2>Player: ${this.name}</h2>
         <button class="delete" data-id=${this.id}>Delete</button>
         `
+        const input = document.querySelector("#name-form");
+        input.style.display = 'none';
     }
 }
 
