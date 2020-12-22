@@ -11,13 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
     getGames()
 })
 
-// first fetch call to get previous Game Scores
-const getGames = () => {
-    fetch('http://localhost:3000/api/v1/game')
-    .then(r => r.json())
-    .then(data => renderGames(data))
-}
-
 form.addEventListener("submit", displayName);
 input.addEventListener("change", handleInput);
 
@@ -32,27 +25,12 @@ function handleInput(event) {
     banner.textContent = event.target.value;
 }
 
-start.addEventListener("click", startGame);
-
-const main = () => {
-    return document.querySelector('main')
-}
-
-const renderGames = (gameData) => {
-    gameData.forEach(game => renderGameCard(game))
-}
-
-const renderGameCard = (gameObj) => {
-    let gameCard = document.createElement('div')
-    gameCard.className = "card"
-    gameCard.dataset.id = gameObj.id 
-    gameCard.innerHTML = `Previous Scores: ${gameObj.score} by player ${gameObj.player_id}`
-    main().appendChild(gameCard)
-} 
-
 function startGame() {
     timer = setInterval(decrementCounter, 1000);
 }
+
+start.addEventListener("click", startGame);
+
 
 function decrementCounter() {
     const currentCount = parseInt(counter.textContent, 10);
@@ -64,14 +42,9 @@ function decrementCounter() {
     // else resume game
 }
 
-function resumeGame() {
-    counter.textContent = "Game Over";
-    // let score = document.querySelector("#score");
 
     // postGameScore(score)
     // postGameScore()here would go a post request to game to post the score
-}
-
 // function postGameScore(score) {
 //     return fetch('http://localhost:3000/api/v1/game', {
 //         method: "POST",
