@@ -1,9 +1,9 @@
 let timer;
 
 const counter = document.querySelector("#counter");
-const start = document.querySelector("#start");
+const start = document.querySelector("#button-start");
 const playerName = document.querySelector("#name");
-const form = document.querySelector("#name-form");
+// const form = document.querySelector("#name-form");
 const input = document.querySelector("#player");
 const createButton = document.querySelector("#create-button");
 
@@ -11,19 +11,19 @@ document.addEventListener('DOMContentLoaded', () => {
     getGames()
 })
 
-form.addEventListener("submit", displayName);
-input.addEventListener("change", handleInput);
+// form.addEventListener("submit", displayName);
+// input.addEventListener("change", handleInput);
 
-function displayName(event) {
-    event.preventDefault();
-    input.style.display = 'none';
-    createButton.style.display = 'none';
-}
+// function displayName(event) {
+//     event.preventDefault();
+//     input.style.display = 'none';
+//     createButton.style.display = 'none';
+// }
 
-function handleInput(event) {
-    const banner = document.querySelector("#banner");
-    banner.textContent = event.target.value;
-}
+// function handleInput(event) {
+//     const banner = document.querySelector("#banner");
+//     banner.textContent = event.target.value;
+// }
 
 function startGame() {
     timer = setInterval(decrementCounter, 1000);
