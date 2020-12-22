@@ -1,3 +1,11 @@
+
+class Game{
+    constructor(score, player_id){
+        this.score = score;
+        this.player_id = player_id
+    }
+}
+
 // first fetch call to get previous Game Scores
 const getGames = () => {
     fetch('http://localhost:3000/api/v1/game')
