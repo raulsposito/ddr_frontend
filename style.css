@@ -27,9 +27,18 @@ h2 {
 .stage {
 	background-color: black;
 	height: 500px;
-	width: 500px;
+	width: 300px;
     text-align: center;
     color: #ffffff
+}
+
+#score {
+    padding-top : 0;
+    padding-bottom : 5px;
+    border-bottom : none;
+    font-family : 'Julius Sans One', sans-serif;
+    font-size : 3.2em;
+    text-transform : uppercase;
 }
 
 
@@ -46,10 +55,11 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
+
+    
     perspective: 1500px;
   }
-  
+
   #pad {
     display: flex;
     flex-direction: column;
