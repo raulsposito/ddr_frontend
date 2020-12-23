@@ -40,7 +40,7 @@ function playerFormSubmission(){
     let player = {
         name: name
     }
-
+    // second fetch call to post players 
     fetch('http://localhost:3000/api/v1/player', {
         method: "POST",
         headers: {
