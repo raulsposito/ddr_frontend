@@ -32,6 +32,8 @@ const renderGameCard = (gameObj) => {
 
 function resumeGame() {
     counter.textContent = "Game Over";
+    // hideStage();
+    // postScore();
     // let score = document.querySelector("#score");
 }
 
