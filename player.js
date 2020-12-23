@@ -9,7 +9,6 @@ class Player{
         playerDiv.innerHTML =
         `
         <h2>Welcome ${this.name}!</h2>
-        <button class="delete" data-id=${this.id}>Delete</button>
         `
         const input = document.querySelector("#name-form");
         input.style.display = 'none';

@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function startGame() {
     timer = setInterval(decrementCounter, 1000);
+    getArrowsInput()
 }
 
 start.addEventListener("click", startGame);

@@ -1,8 +1,8 @@
 
 class Game{
-    constructor(score, player_id){
-        this.score = score;
-        this.player_id = player_id
+    constructor(data){
+        this.score = data.score;
+        this.player_id = data.player_id
     }
 }
 
@@ -34,3 +34,30 @@ function resumeGame() {
     counter.textContent = "Game Over";
     // let score = document.querySelector("#score");
 }
+
+function getArrowsInput() {
+    let up = document.getElementById("button-up")
+    let left = document.getElementById("button-left")
+    let right = document.getElementById("button-right")
+    let down = document.getElementById("button-down")
+
+    document.addEventListener("keydown", (e) => {
+
+        switch (e.code) {
+            case 38:
+                left;
+                break;
+            case 38: 
+                up;
+                break;
+            case 39:
+                right;
+                break;
+            case 40:
+                down;
+                break;
+        }
+    })
+}
+
+
