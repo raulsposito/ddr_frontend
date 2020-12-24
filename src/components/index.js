@@ -1,17 +1,16 @@
 let timer;
 
 const counter = document.querySelector("#counter");
-const banner = document.querySelector("#banner");
+const start = document.querySelector("#start");
 
 document.addEventListener('DOMContentLoaded', () => {
     getGames()
 })
 
-banner.addEventListener("click", startGame);
+start.addEventListener("click", startGame);
 
 function startGame() {
     timer = setInterval(decrementCounter, 1000);
-    getArrowsInput()
 }
 
 function decrementCounter() {
