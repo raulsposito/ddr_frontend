@@ -13,16 +13,6 @@ function startGame() {
     timer = setInterval(decrementCounter, 1000);
 }
 
-function decrementCounter() {
-    const currentCount = parseInt(counter.textContent, 10);
-    if (currentCount > 0) {
-        counter.textContent =  `${currentCount - 1}`;
-    }
-    else
-    resumeGame()
-}
-
-
     // postGameScore(score)
     // postGameScore()here would go a post request to game to post the score
 // function postGameScore(score) {

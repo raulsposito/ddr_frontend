@@ -6,6 +6,15 @@ class Game{
     }
 }
 
+function decrementCounter() {
+    const currentCount = parseInt(counter.textContent, 10);
+    if (currentCount > 0) {
+        counter.textContent =  `${currentCount - 1}`;
+    }
+    else
+    resumeGame()
+}
+
 // first fetch call to get previous Game Scores
 const getGames = () => {
     fetch('http://localhost:3000/api/v1/game')
