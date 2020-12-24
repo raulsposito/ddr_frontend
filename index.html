@@ -23,68 +23,33 @@
               <h2 id='score'>0</h2>
         <div class="stage">
           <p id="log"></p>
+
+          <div class="row">
+            <div class="column">
+              <img id="button-left" src="img/lh_left.png" alt="left arrow" width="75" height="75">
+            </div>
+            <div class="column">
+              <img id="button-down" src="img/lh_down.png" alt="down arrow" width="75" height="75">
+            </div>
+            <div class="column">
+              <img id="button-right" src="img/lh_right.png" alt="right arrow" width="75" height="75">
+            </div>
+            <div class="column">
+              <img id="button-up" src="img/lh_up.png" alt="up" width="75" height="75">
+            </div>
+          </div>
         </div>
       <!-- Add stuff Here! -->
       
       <!-- <button id="start" > Start Game </button> -->
       <h1 id='counter'>10</h1>
       
-      <div id="canvas">
-        <div id="pad">
-          <div id="top-bar">
-            <div id="button-select" class="button">Select</div>
-            <div id="button-start" class="button">Start</div>
-          </div>
-          <div id="buttons">
-            <div id="button-cross" class="button">
-              <svg width="100%" height="100%" viewBox="0 0 100 100">
-                <path d="M 30,30 70,70 M30,70 70,30" stroke="#222" stroke-width="7" />
-              </svg>
-            </div>
-            <div id="button-up" class="button">
-              <svg width="100%" height="100%" viewBox="0 0 100 100">
-                <path d="M 50,20 80,50 65,50 65,70 35,70 35,50 20,50 Z" stroke="#fff" stroke-width="5" fill="none" />
-              </svg>
-            </div>
-            <div id="button-circle" class="button">
-              <svg width="100%" height="100%" viewBox="0 0 100 100">
-                <circle cx="50" cy="50" r="20" stroke="#222" stroke-width="7" fill="none" />
-              </svg>
-            </div>
-            <div id="button-left" class="button">
-              <svg width="100%" height="100%" viewBox="0 0 100 100">
-                <path d="M 20,50 50,20 50,35 70,35 70,65 50,65 50,80 20,50 Z" stroke="#fff" stroke-width="5" fill="none" />
-              </svg>
-            </div>
-            <div id="center-center">DDR!</div>
-            <div id="button-right" class="button">
-              <svg width="100%" height="100%" viewBox="0 0 100 100">
-                <path d="M 80,50 50,20 50,35 30,35 30,65 50,65 50,80 80,50 Z" stroke="#fff" stroke-width="5" fill="none" />
-              </svg>
-            </div>
-            <div id="button-triangle" class="button">
-              <svg width="100%" height="100%" viewBox="0 0 100 100">
-                <path d="M 50,30 70,70 30,70 Z" stroke="#222" stroke-width="7" fill="none" />
-              </svg>
-            </div>
-            <div id="button-down" class="button">
-              <svg width="100%" height="100%" viewBox="0 0 100 100">
-                <path d="M 50,80 80,50 65,50 65,30 35,30 35,50 20,50 Z" stroke="#fff" stroke-width="5" fill="none" />
-              </svg>
-            </div>
-            <div id="button-square" class="button">
-              <svg width="100%" height="100%" viewBox="0 0 100 100">
-                <path d="M 30,30 30,70 70,70 70,30 Z" stroke="#222" stroke-width="7" fill="none" />
-              </svg>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+      
     </main>
 
     <script src="src/components/index.js"></script>
     <script src="src/components/game.js"></script>
     <script src="src/components/player.js"></script>
+    <script src="src/services/handleKeys.js"></script>
   </body>
 </html> 

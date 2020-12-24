@@ -41,6 +41,10 @@ h2 {
     text-transform : uppercase;
 }
 
+.column {
+    float: left;
+    width: 25%;
+  }
 
 html, body {
     margin: 0;
@@ -147,4 +151,10 @@ html, body {
   .button.correct svg path {
     stroke: green !important;
     fill: lime !important;
+  }
+
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
   }
