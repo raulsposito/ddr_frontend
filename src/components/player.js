@@ -4,9 +4,8 @@ class Player{
     }
 
     renderPlayer(){
-        let playerDiv = document.getElementById("banner")
     
-        playerDiv.innerHTML =
+        banner.innerHTML =
         `
         <h2>Welcome ${this.name}!</h2>
         `

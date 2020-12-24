@@ -1,18 +1,18 @@
 let timer;
 
 const counter = document.querySelector("#counter");
-const start = document.querySelector("#button-start");
+const banner = document.querySelector("#banner");
 
 document.addEventListener('DOMContentLoaded', () => {
     getGames()
 })
 
+banner.addEventListener("click", startGame);
+
 function startGame() {
     timer = setInterval(decrementCounter, 1000);
     getArrowsInput()
 }
-
-start.addEventListener("click", startGame);
 
 function decrementCounter() {
     const currentCount = parseInt(counter.textContent, 10);
