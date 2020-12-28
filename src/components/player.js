@@ -8,10 +8,32 @@ class Player{
         banner.innerHTML =
         `
         <h2>Welcome ${this.name}!</h2>
+        <button id="dlt-btn" data-id=${this.name}>Delete</button>
         `
         const input = document.querySelector("#name-form");
         input.style.display = 'none';
+        let btn = document.getElementById("dlt-btn")
+        btn.addEventListener("click", this.deletePlayer)
     }
+    
+    deletePlayer(){
+        debugger  // here I need the value of the player id
+        let deleteObj = event.target.dataset.id
+        fetch("http://localhost:3000/api/v1/player", {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(deleteObj),
+        })
+        .then(resp => resp.json())
+        .then(()=> {
+            alert("Player deleted")
+            this.location.reload()
+        }) 
+        .catch(error => alert(`Couldn't delete player and ${error}`))
+    }
+
 }
 
 document.addEventListener('DOMContentLoaded', () => {
