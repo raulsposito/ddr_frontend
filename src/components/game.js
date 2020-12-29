@@ -46,6 +46,8 @@ function resumeGame() {
     // postScore();
 }
 
+
+
 // function postScore(){
 //     let game = {
 //         score: score,

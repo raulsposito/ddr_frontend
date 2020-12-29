@@ -1,6 +1,7 @@
 class Player{
-    constructor(name){
+    constructor(name, id){
         this.name = name
+        this.id = id
     }
 
     renderPlayer(){
@@ -50,8 +51,19 @@ function playerFormSubmission(){
     })
     .then(resp => resp.json())
     .then(player => {
-        let p = new Player(player.name)
+        let p = new Player(player.name, player.id)
+        Player.currenPlayer = p 
         p.renderPlayer();
     })
 }
 
+// third fetch to set players id used by the backend when saved >>???
+// const getPlayerId = () => {
+//     fetch('http://localhost:3000/api/v1/player')
+//     .then(resp => resp.json())
+//     .then(player => console.log(player.length))
+// }
+// 
+// const setPlayerId = () => {
+//     this.id = (player + 1)
+// }
