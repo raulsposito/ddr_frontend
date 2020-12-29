@@ -28,3 +28,4 @@ document.addEventListener("keyup", function(e) {
         let down = document.getElementById("down").style.visibility = 'visible'
     }
 })
+
