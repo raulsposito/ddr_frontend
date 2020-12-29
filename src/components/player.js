@@ -12,6 +12,9 @@ class Player{
         `
         const input = document.querySelector("#name-form");
         input.style.display = 'none';
+
+        // let btn = document.getElementById("dlt-btn")
+        // btn.addEventListener("click", deletePlayer)
     }
 }
 
@@ -57,13 +60,24 @@ function playerFormSubmission(){
     })
 }
 
-// third fetch to set players id used by the backend when saved >>???
-// const getPlayerId = () => {
-//     fetch('http://localhost:3000/api/v1/player')
+// function deletePlayer(e) {
+//     // debugger
+//     e.preventDefault()
+//     fetch(`http://localhost:3000/api/v1/player/${e.target.dataset.id}`, {
+//         method: 'DELETE'
+//     })
 //     .then(resp => resp.json())
-//     .then(player => console.log(player.length))
+//     .then(()=> {
+//         alert("Player deleted")
+//         // this.location.reload()
+//         removePlayer()
+//     }) 
+//     .catch(error => alert(`Couldn't delete player and ${error}`))
 // }
 // 
-// const setPlayerId = () => {
-//     this.id = (player + 1)
+// const removePlayer = () => {
+//     banner.innerHTML = 
+//     `
+//     Thank you for playing!
+//     `
 // }

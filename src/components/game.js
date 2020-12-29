@@ -42,29 +42,23 @@ const renderGameCard = (gameObj) => {
 function resumeGame() {
     counter.textContent = "Game Over";
     // hideStage();
-    // let score = document.querySelector("#score");
-    // postScore();
+    postScore();
 }
 
-
-
-// function postScore(){
-//     let game = {
-//         score: score,
-//     }
-// 
-//     fetch('http://localhost:3000/api/v1/game', {
-//         method: "POST",
-//         headers: {
-//             'Accept': 'application/json',
-//             'Content-Type': 'application/json'
-//         },
-//         body: JSON.stringify(game.score)
-//     })
-//     .then( function ( response ) {
-//         return response.json()
-//     })
-//     .then( function ( object ) {
-//         renderGames()
-//     })
-// }
+ function postScore(){
+    let score = document.querySelector("#score").innerHTML
+ 
+    fetch('http://localhost:3000/api/v1/game', {
+        method: "POST",
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            game: {
+                score: score
+            }
+        })
+    })
+    this.location.reload()
+ }
