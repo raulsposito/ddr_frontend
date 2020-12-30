@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let timer;
     const counter = document.querySelector("#counter");
     const start = document.querySelector("#start");
-    getGames()
+    Game.getAll();
 })
 
 start.addEventListener("click", startGame);
