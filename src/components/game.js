@@ -16,10 +16,11 @@ class Game{
         fetch('http://localhost:3000/api/v1/game')
         .then(r => r.json())
         .then(data => {
-            // debugger
+            debugger
             data.forEach(game => {
-                let newGame = new Game(game)
-                newGame.render();
+                //let newGame = new Game(game)
+                //newGame.render();
+                console.log(game)
             })
         })
     }
