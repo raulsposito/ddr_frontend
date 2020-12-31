@@ -5,22 +5,20 @@ class Game{
         this.player_id = data.player_id
     }
 
-    static render = () => {
-        return `
-        <div className="card" data-id=${this.id}>
-        <p>Previous Score: ${this.score}</p>
-        `
-    }
-
     static getAll() {
         fetch('http://localhost:3000/api/v1/game')
         .then(r => r.json())
         .then(data => {
-            debugger
+            //debugger
             data.forEach(game => {
-                //let newGame = new Game(game)
-                //newGame.render();
                 console.log(game)
+                //debugger
+                let newGameHtml = `
+                <div className="card" data-id=${game.id}>
+                <p>Previous Score: ${game.score}</p>
+                `
+                const container = document.querySelector(".container")
+                container.innerHTML += newGameHtml;
             })
         })
     }
