@@ -24,7 +24,8 @@ h2 {
     font-family: Helvetica, Arial, sans-serif;
     color: #ffffff;
 }
-.stage {
+
+#stage {
 	background-color: black;
 	height: 400px;
 	width: 300px;
