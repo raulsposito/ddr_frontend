@@ -8,5 +8,5 @@ document.addEventListener('DOMContentLoaded', () => {
 start.addEventListener("click", startGame);
 
 function startGame() {
-    timer = setInterval(decrementCounter, 1000);
+    timer = setInterval(Game.decrementCounter, 1000);
 }
