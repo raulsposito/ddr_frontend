@@ -33,6 +33,10 @@ class Game{
         Game.postScore();
     }
 
+    static start(){
+        setInterval(Game.decrementCounter, 1000);
+    }
+
     static postScore(){
         let score = document.querySelector("#score").innerHTML
  
@@ -48,6 +52,7 @@ class Game{
                 }
             })
         })
-        window.location.reload()
     }
 }
+
+start.addEventListener("click", Game.start);
