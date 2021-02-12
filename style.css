@@ -8,6 +8,11 @@ main {
     font-weight: 300;
 }
 
+.container {
+  height: 200px;
+  overflow: scroll;
+}
+
 .name-container {
     background: url('img/background.jpg') no-repeat;
 	background-size: cover;

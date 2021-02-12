@@ -1,1 +1,1 @@
-gsap.fromTo(".left-mov", {x: 700, y: 300}, {x: 700, y: 700, duration: 1});
+// gsap.fromTo(".left-mov", {x: 700, y: 300}, {x: 700, y: 700, duration: 1});
